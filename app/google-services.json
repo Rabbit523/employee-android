@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "80050963557",
+    "firebase_url": "https://health-wellness-employee.firebaseio.com",
+    "project_id": "health-wellness-employee",
+    "storage_bucket": "health-wellness-employee.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:80050963557:android:41898509423b0f66",
+        "android_client_info": {
+          "package_name": "professional.wellness.health.com.employeeapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "80050963557-0dqicf87vf7a4d8ekqur965g0jimolcp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "professional.wellness.health.com.employeeapp",
+            "certificate_hash": "97645cbf2d21e1c7f4a8ab0658b88c5a664f9df9"
+          }
+        },
+        {
+          "client_id": "80050963557-np4uheo9u5m25hh9jeoqnm5k214q7g80.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD82SzlBjJpC82V1eWd-aF87oyybU6VDRQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "80050963557-np4uheo9u5m25hh9jeoqnm5k214q7g80.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,9 @@
+<resources>
+<!--    <string name="app_name">EmployeeApp</string>-->
+    <string name="app_name">Health &amp; Wellness Professionals</string>
+    <string name="logout"><u>Logout</u></string>
+    <string name="txt_secuity">Please enter last four ss# :</string>
+    <string name="txt_secuirty_number">Social Security number</string>
+    <string name="text_profile">Highly trained professional working in hospitals and independent laboratories using sophisticated procedures and equipment.</string>
+
+</resources>

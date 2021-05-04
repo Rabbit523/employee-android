@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/ll_return"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:background="@color/red_color"
+        android:layout_height="40dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RETURN"
+            android:textColor="#ffffff"
+            android:gravity="center_horizontal" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="0dp">
+            <TextView
+                android:layout_margin="12dp"
+                android:layout_width="match_parent"
+                android:text="Company Announcement"
+                android:textColor="@color/red_color"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:layout_marginRight="12dp"
+                android:layout_marginLeft="12dp"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:layout_height="300dp"
+                android:id="@+id/image_announcemnet" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:padding="7dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/txt_title"
+                    android:layout_weight="1.7"
+                    android:text="Onsite Biometric Screening"
+                    android:layout_width="0dp"
+                    android:textColor="@color/darkBlue"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/txt_date"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:textColor="@color/darkBlue"
+                    android:text="Date:13-09-2017"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_description"
+                android:padding="7dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginLeft="12dp"
+                android:text="Complete a Wide Rande of Standard Health"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

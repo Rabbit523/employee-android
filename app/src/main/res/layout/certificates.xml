@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:background="#edecee"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@color/red"
+        android:layout_height="1dp"></LinearLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/ll_nonetwork_message"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="match_parent">
+        <professional.wellness.health.com.employeeapp.View.RegularTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15dp"
+            android:textColor="#000"
+            android:text="No Internet Connection"
+            android:textSize="15sp"
+            />
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:visibility="gone"
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_certificate"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"/>
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="30dp"
+            android:src="@mipmap/plus" />
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/empAddNewCerti"
+            android:layout_width="match_parent"
+            android:layout_gravity="bottom"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/empCross"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="right"
+                    android:layout_margin="10dp"
+                    android:background="@mipmap/cross">
+
+                </ImageView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/add" />
+
+                    <professional.wellness.health.com.employeeapp.View.RegularTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center"
+                        android:textSize="12sp"
+                        android:text="Add New Certificate"
+                        android:textColor="@color/darkBlue" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".9"
+                        android:orientation="vertical">
+
+                        <professional.wellness.health.com.employeeapp.View.RegularTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Subject"
+                            android:textSize="11sp"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="@color/darkBlue" />
+
+                        <professional.wellness.health.com.employeeapp.View.RegularEditText
+                            android:id="@+id/subject"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:paddingLeft="10dp"
+                            android:textColor="@color/darkBlue"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/square_box" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="8dp"
+                        android:layout_height="0dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.2"
+                        android:orientation="vertical">
+
+                        <professional.wellness.health.com.employeeapp.View.RegularTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Submission Time"
+                            android:textSize="11sp"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="@color/darkBlue" />
+
+                        <professional.wellness.health.com.employeeapp.View.RegularEditText
+                            android:id="@+id/submission_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:textColorHint="@color/grey"
+                            android:hint="dd | mm | yyyy"
+                            android:editable="false"
+                            android:layout_marginTop="8dp"
+                            android:paddingLeft="15dp"
+                            android:textSize="12sp"
+                            android:background="@drawable/square_box" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <professional.wellness.health.com.employeeapp.View.RegularTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Description"
+                            android:textSize="11sp"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="@color/darkBlue" />
+
+                        <professional.wellness.health.com.employeeapp.View.RegularEditText
+                            android:id="@+id/description"
+                            android:layout_width="match_parent"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="10dp"
+                            android:textColor="@color/darkBlue"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/square_box" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <professional.wellness.health.com.employeeapp.View.RegularTextView
+                    android:id="@+id/file_upload"
+                    android:layout_width="wrap_content"
+                    android:textSize="14sp"
+                    android:layout_marginTop="20dp"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/darkBlue"
+                    android:layout_height="wrap_content">
+
+                </professional.wellness.health.com.employeeapp.View.RegularTextView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:id="@+id/choose_pdf"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="@drawable/sqaure_blue"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_margin="10dp"
+                            android:src="@mipmap/group" />
+
+                        <professional.wellness.health.com.employeeapp.View.RegularTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="11dp"
+                            android:text="Upload (PDF,DOC)"
+                            android:textColor="#ffffff"
+                            android:textSize="11sp" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"
+                        android:background="#164370" />
+
+                    <LinearLayout
+                        android:id="@+id/choose_camera"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/sqaure_blue"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_margin="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:src="@mipmap/camera" />
+
+                        <professional.wellness.health.com.employeeapp.View.RegularTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="11dp"
+                            android:text="From Camera"
+                            android:textColor="#ffffff"
+                            android:textSize="11sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="163dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="18dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="50dp"
+                    android:layout_marginTop="32dp"
+                    android:gravity="center">
+
+                    <professional.wellness.health.com.employeeapp.View.RegularButton
+                        android:id="@+id/submit"
+                        android:layout_width="match_parent"
+                        android:layout_height="38dp"
+                        android:background="@drawable/rounded_short_radius_blue"
+                        android:text="SUBMIT"
+                        android:textColor="#ffff" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+    </FrameLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

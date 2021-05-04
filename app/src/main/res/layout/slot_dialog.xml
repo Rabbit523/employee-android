@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:id="@+id/accept_layout"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content">
+
+
+
+            <ImageView
+                android:layout_width="20dp"
+                android:src="@mipmap/slot_image"
+                android:layout_height="20dp" />
+
+            <professional.wellness.health.com.employeeapp.View.RegularTextView
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/darkBlue"
+                android:text="Slots already been filled"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+        <professional.wellness.health.com.employeeapp.View.RegularButton
+            android:id="@+id/done"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_short_radius_blue"
+            android:text="Done"
+            android:layout_marginBottom="20dp"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

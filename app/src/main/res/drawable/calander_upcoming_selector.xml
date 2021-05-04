@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--    <item android:state_pressed="true" android:drawable="@drawable/red_month" />
+        <item android:state_focused="true" android:drawable="@drawable/calander_new_blue" />
+        <item android:drawable="@drawable/calander_new_blue" />-->
+
+    <item android:state_pressed="true" android:drawable="@drawable/red_upcoming_icon" />
+    <item android:state_selected="true" android:drawable="@drawable/red_upcoming_icon" />
+    <item android:state_activated="true" android:drawable="@drawable/red_upcoming_icon" />
+    <item android:drawable="@drawable/blue_upcoming" />
+</selector>

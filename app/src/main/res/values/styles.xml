@@ -1,0 +1,35 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/darkBlue</item>
+        <item name="colorPrimaryDark">@color/darkBlue</item>
+        <item name="colorAccent">@color/darkBlue</item>
+        <item name="android:dropDownListViewStyle">@style/popup</item>
+
+    </style>
+    <style name="popupMenuStyle" >
+        <item name="android:divider">#eaeaea</item>
+        <item name="android:dividerHeight">1dp</item>
+    </style>
+
+    <style name="popup" parent="Widget.AppCompat.ListView.DropDown">
+        <item name="android:divider">@color/view</item>
+        <item name="android:dividerHeight">1dp</item>
+        <item name="android:itemBackground">@android:color/white</item>
+
+
+    </style>
+    <style name="SpinnerEditText" >
+        <item name="android:drawableRight">@drawable/ic_menu_down_grey600_18dp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:focusable">false</item>
+        <item name="android:focusableInTouchMode">false</item>
+        <item name="android:clickable">false</item>
+        <item name="android:cursorVisible">false</item>
+    </style>
+
+
+
+</resources>

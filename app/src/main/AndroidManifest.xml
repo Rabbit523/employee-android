@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="professional.wellness.health.com.employeeapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+
+    <permission
+        android:name="app.cloudstringers.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/app_iconnn"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activity.SplashActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".activity.New"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name=".activity.LoginActivity"
+            android:screenOrientation="portrait"></activity>
+
+
+
+        <activity
+            android:name=".activity.MonthClinicDetailAcivity"
+            android:screenOrientation="portrait"></activity>
+
+
+        <activity
+            android:name=".activity.CompanyAnnouncementDetailActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".activity.MonthAvailableDetailActivity"
+            android:screenOrientation="portrait"></activity>
+
+
+        <activity
+            android:name=".activity.WeekClinicDetailActivity"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name=".activity.MonthClinicWeekDetailActivity"
+            android:screenOrientation="portrait"></activity>
+        <!-- Firebase Notifications -->
+        <service android:name=".Fcm.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".Utils.WebService"/>
+        <service android:name=".Utils.MyLocationService"
+    />
+
+        <service android:name=".Utils.ClinicService"
+            />
+        <service android:name=".Fcm.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <!-- ./Firebase Notifications -->
+      <!--  <service android:name=".Utils.LocationUpdate_Service"/>-->
+    <!--    <receiver android:name=".Utils.NetworkChangeReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+
+        <receiver android:name=".Utils.GpsLocationReceiver">
+            <intent-filter>
+                <action android:name="android.location.PROVIDERS_CHANGED" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>-->
+
+    </application>
+
+</manifest>

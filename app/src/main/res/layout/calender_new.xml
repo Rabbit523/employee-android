@@ -1,0 +1,1031 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/grayColor"
+    android:id="@+id/main_layout"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/layout_upcoming_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/upcoming_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/layout_error"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="match_parent">
+        <professional.wellness.health.com.employeeapp.View.RegularTextView
+            android:id="@+id/text_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:text="Error"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dayView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/monthview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:background="@color/red_color"
+                android:layout_height="30dp">
+
+
+
+                <ImageView
+                    android:id="@+id/previous_cal_day"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@mipmap/left_white_arrow"/>
+
+                <professional.wellness.health.com.employeeapp.View.RegularTextView
+                    android:id="@+id/titlee"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:textSize="13dip"
+                    />
+
+                <ImageView
+                    android:id="@+id/next_cal_day"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@mipmap/right_white_arrow"/>
+
+
+                <TextView
+                    android:id="@+id/img_current_day"
+                    android:layout_width="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:textSize="13sp"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:text="Today"
+                    android:layout_height="wrap_content" />
+                <!--
+                                <ImageView
+                                    android:id="@+id/img_previous_day"
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:background="@mipmap/left_white_arrow"/>
+
+                                <professional.wellness.health.com.employeeapp.View.RegularTextView
+                                    android:id="@+id/titlee"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:padding="7dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="July"
+                                    android:layout_centerHorizontal="true"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="18dip"
+                                    />
+
+                                <ImageView
+                                    android:id="@+id/img_next_day"
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:layout_marginRight="10dp"
+                                    android:background="@mipmap/right_white_arrow"/>
+                -->
+
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:background="#FFFFFF"
+                        android:layout_height="45dp">
+
+
+                        <LinearLayout
+                            android:gravity="center"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content">
+
+                            <professional.wellness.health.com.employeeapp.View.RegularTextView
+                                android:layout_width="wrap_content"
+                                android:textColor="#9eA4Af"
+                                android:text="S"
+                                android:textSize="16dp"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:gravity="center"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content">
+
+                            <professional.wellness.health.com.employeeapp.View.RegularTextView
+                                android:layout_width="wrap_content"
+                                android:textColor="#9eA4Af"
+                                android:text="M"
+                                android:textSize="16dp"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:gravity="center"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content">
+
+                            <professional.wellness.health.com.employeeapp.View.RegularTextView
+                                android:layout_width="wrap_content"
+                                android:textColor="#9eA4Af"
+                                android:text="T"
+                                android:textSize="16dp"
+                                android:layout_height="wrap_content" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:gravity="center"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent">
+
+                            <professional.wellness.health.com.employeeapp.View.RegularTextView
+                                android:layout_width="wrap_content"
+                                android:textColor="#9eA4Af"
+                                android:text="W"
+                                android:textSize="16dp"
+                                android:layout_height="wrap_content" />
+
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:gravity="center"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent">
+
+                            <professional.wellness.health.com.employeeapp.View.RegularTextView
+                                android:layout_width="wrap_content"
+                                android:textColor="#9eA4Af"
+                                android:text="T"
+                                android:textSize="16dp"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:gravity="center"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent">
+
+
+                            <professional.wellness.health.com.employeeapp.View.RegularTextView
+                                android:layout_width="wrap_content"
+                                android:textColor="#9eA4Af"
+                                android:text="F"
+                                android:textSize="16dp"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:gravity="center"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent">
+
+
+                            <professional.wellness.health.com.employeeapp.View.RegularTextView
+                                android:layout_width="wrap_content"
+                                android:textColor="#9eA4Af"
+                                android:text="S"
+                                android:textSize="16dp"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"/>
+
+
+                    <LinearLayout
+                        android:id="@+id/date_view"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:background="#FFFFFF"
+                        android:layout_height="45dp">
+
+<!--
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/daycloseRecycler"
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_height="wrap_content"/>-->
+
+                        <LinearLayout
+                            android:id="@+id/dayclosefirst"
+                            android:gravity="center"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="10dp"
+                            android:layout_height="35dp">
+
+                            <professional.wellness.health.com.employeeapp.View.RegularTextView
+                                android:id="@+id/txt_date1"
+                                android:layout_width="wrap_content"
+                                android:textColor="#E1E1E1"
+                                android:textSize="10sp"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/dayclosesecond"
+                            android:gravity="center"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="35dp">
+
+                            <professional.wellness.health.com.employeeapp.View.RegularTextView
+                                android:id="@+id/txt_date2"
+                                android:layout_width="wrap_content"
+                                android:textColor="#E1E1E1"
+
+                                android:textSize="10sp"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/dayclosethired"
+                            android:gravity="center"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="35dp">
+
+                            <professional.wellness.health.com.employeeapp.View.RegularTextView
+                                android:id="@+id/txt_date3"
+                                android:layout_width="wrap_content"
+                                android:textColor="#9eA4Af"
+
+                                android:textSize="10sp"
+                                android:layout_height="wrap_content" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/dayclosefourth"
+                            android:gravity="center"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="35dp">
+
+                            <professional.wellness.health.com.employeeapp.View.RegularTextView
+                                android:id="@+id/txt_date4"
+                                android:layout_width="wrap_content"
+                                android:textColor="#9eA4Af"
+
+                                android:textSize="10sp"
+                                android:layout_height="wrap_content" />
+
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/dayclosefifth"
+                            android:gravity="center"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="35dp">
+
+                            <professional.wellness.health.com.employeeapp.View.RegularTextView
+                                android:id="@+id/txt_date5"
+                                android:layout_width="wrap_content"
+                                android:textColor="#9eA4Af"
+
+                                android:textSize="10sp"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/dayclosesix"
+                            android:gravity="center"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="35dp">
+
+
+                            <professional.wellness.health.com.employeeapp.View.RegularTextView
+                                android:id="@+id/txt_date6"
+                                android:layout_width="wrap_content"
+                                android:textColor="#9eA4Af"
+
+                                android:textSize="10sp"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/daycloseseven"
+                            android:gravity="center"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_marginRight="10dp"
+                            android:layout_height="35dp">
+
+
+                            <professional.wellness.health.com.employeeapp.View.RegularTextView
+                                android:id="@+id/txt_date7"
+                                android:layout_width="wrap_content"
+                                android:textColor="#9eA4Af"
+                                android:textSize="10sp"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+
+
+                    <LinearLayout
+                        android:id="@+id/swipe_layout_day"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:background="#FFFFFF"
+                        android:layout_height="wrap_content">
+                        <GridView
+                            xmlns:android="http://schemas.android.com/apk/res/android"
+                            android:id="@+id/gridviewDay"
+                            android:layout_weight="1"
+                            android:layout_width="fill_parent"
+                            android:layout_height="190dp"
+                            android:background="#edf0f2"
+                            android:layout_gravity="center_horizontal"
+                            android:listSelector="@android:color/transparent"
+                            android:verticalSpacing="1dp"
+                            android:numColumns="7"
+                            android:stretchMode="columnWidth" />
+
+                    </LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:background="@color/color_white"
+    android:gravity="right"
+    android:layout_height="40dp">
+
+
+                    <ImageView
+                        android:id="@+id/day_calander_down"
+                        android:layout_width="25dp"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginRight="20dp"
+                        android:src="@mipmap/calnander_day_down"
+                        android:layout_height="25dp" />
+
+</LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="vertical">
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/day_list_Recycler"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </ScrollView>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/ll_week_title"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@color/red_color"
+        android:layout_marginBottom="1dp"
+        android:layout_height="wrap_content">
+
+
+
+        <professional.wellness.health.com.employeeapp.View.RegularTextView
+            android:id="@+id/week_title"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="7dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="July"
+            android:layout_centerHorizontal="true"
+            android:textColor="#FFFFFF"
+            android:textSize="18dip"
+            />
+
+
+
+        <TextView
+            android:id="@+id/img_current_week"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="10dp"
+            android:textSize="13sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:text="Today"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+
+    <com.alamkanak.weekview.WeekView
+        android:id="@+id/weekView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:eventTextColor="@android:color/white"
+        app:textSize="12sp"
+        app:eventTextSize="8sp"
+        android:visibility="gone"
+        app:eventCornerRadius="3dp"
+        app:hourHeight="100dp"
+        app:headerColumnPadding="8dp"
+        app:headerColumnTextColor="#8f000000"
+        app:headerRowPadding="12dp"
+        app:columnGap="8dp"
+        app:noOfVisibleDays="7"
+        app:dayNameLength="length_short"
+        app:headerRowBackgroundColor="@color/red"
+        app:dayBackgroundColor="#05000000"
+        app:todayBackgroundColor="#1848adff"
+        app:headerColumnBackground="#ffffffff"/>
+
+    <LinearLayout
+        android:id="@+id/monthView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:background="@color/red_color"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:id="@+id/img_previous"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:background="@mipmap/left_white_arrow"/>
+
+            <professional.wellness.health.com.employeeapp.View.RegularTextView
+                android:id="@+id/title"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="7dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="July"
+                android:layout_centerHorizontal="true"
+                android:textColor="#FFFFFF"
+                android:textSize="18dip"
+                />
+
+
+
+            <ImageView
+                android:id="@+id/img_next"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginRight="5dp"
+                android:background="@mipmap/right_white_arrow"/>
+
+
+            <TextView
+                android:id="@+id/img_current_month"
+                android:layout_width="wrap_content"
+                android:layout_marginRight="10dp"
+                android:textSize="13sp"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:text="Today"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="2dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:background="@color/red_color"
+            android:layout_height="40dp">
+
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+                <professional.wellness.health.com.employeeapp.View.RegularTextView
+                    android:layout_width="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:text="Sun"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+                <professional.wellness.health.com.employeeapp.View.RegularTextView
+                    android:layout_width="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:text="Mon"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+                <professional.wellness.health.com.employeeapp.View.RegularTextView
+                    android:layout_width="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:text="Tue"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+
+                <professional.wellness.health.com.employeeapp.View.RegularTextView
+                    android:layout_width="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:text="Wed"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+
+                <professional.wellness.health.com.employeeapp.View.RegularTextView
+                    android:layout_width="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:text="Thu"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+
+
+                <professional.wellness.health.com.employeeapp.View.RegularTextView
+                    android:layout_width="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:text="Fri"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+
+
+                <professional.wellness.health.com.employeeapp.View.RegularTextView
+                    android:layout_width="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:text="Sat"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <GridView
+            android:id="@+id/gridview"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:listSelector="@android:color/transparent"
+            android:horizontalSpacing="2dp"
+            android:verticalSpacing="2dp"
+            android:numColumns="7"
+            android:stretchMode="columnWidth" />
+
+
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/mothdayView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            app:cardElevation="4dp"
+            android:layout_marginLeft="10dp"
+            app:cardCornerRadius="1dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp">
+
+
+            <!--   <android.support.v7.widget.CardView
+                   xmlns:android="http://schemas.android.com/apk/res/android"
+                   xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                   android:layout_width="match_parent"
+                   android:layout_height="0dp"
+                   android:layout_weight="1"
+                   android:layout_margin="6dp"
+                   android:layout_marginRight="10dp"
+                   android:layout_marginLeft="10dp"
+                   android:layout_marginBottom="10dp"
+                   android:layout_marginTop="10dp"
+                   card_view:cardUseCompatPadding="true"
+                   card_view:cardElevation="4dp"
+                   card_view:cardCornerRadius="1dp">-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <professional.wellness.health.com.employeeapp.View.RegularTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="6dp"
+                        android:text="Preffered available Clinics"
+                        android:textColor="@color/red"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="6dp"
+                        android:gravity="right"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="4dp"
+                            android:src="@mipmap/iconsclock" />
+
+                        <professional.wellness.health.com.employeeapp.View.RegularTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Prep time 11:00am"
+                            android:textColor="@color/red"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    android:background="@drawable/round_white"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="3dp"
+                            android:src="@mipmap/blueclock" />
+
+                        <professional.wellness.health.com.employeeapp.View.RegularTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:text="Estimate duration : 1 Hour"
+                            android:textColor="@color/darkBlue"
+                            android:textSize="11sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="6dp"
+                            android:gravity="right"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="4dp"
+                                android:src="@mipmap/userblue" />
+
+                            <professional.wellness.health.com.employeeapp.View.RegularTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="Personnel : 08"
+                                android:textColor="@color/darkBlue"
+                                android:textSize="11sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <professional.wellness.health.com.employeeapp.View.RegularTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Location : "
+                            android:textColor="@color/grey"
+                            android:textSize="11sp" />
+
+                        <professional.wellness.health.com.employeeapp.View.RegularTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="2437 W.Main Dalas, Texas"
+                            android:textColor="@color/darkBlue"
+                            android:textSize="10sp" />
+
+                        <professional.wellness.health.com.employeeapp.View.RegularTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|right"
+                            android:gravity="right"
+                            android:text="Date: 13-09-2017"
+                            android:textColor="@color/darkBlue"
+                            android:textSize="11sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+
+                        <professional.wellness.health.com.employeeapp.View.RegularTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Contact Info : "
+                            android:textColor="@color/grey"
+                            android:textSize="11sp" />
+
+                        <professional.wellness.health.com.employeeapp.View.RegularTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Adam Smith"
+                            android:textColor="@color/darkBlue"
+                            android:textSize="10sp" />
+
+                        <professional.wellness.health.com.employeeapp.View.RegularTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|right"
+                            android:gravity="right"
+                            android:text="Clinic Time : 11:30am"
+                            android:textColor="@color/darkBlue"
+                            android:textSize="11sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+
+                        <professional.wellness.health.com.employeeapp.View.RegularTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Phone No : "
+                            android:textColor="@color/grey"
+                            android:textSize="11sp" />
+
+                        <professional.wellness.health.com.employeeapp.View.RegularTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="085-866-6873"
+                            android:textColor="@color/darkBlue"
+                            android:textSize="10sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+
+                        <professional.wellness.health.com.employeeapp.View.RegularTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Jay Walters"
+                            android:textColor="@color/grey"
+                            android:textSize="11sp" />
+
+
+                        <professional.wellness.health.com.employeeapp.View.RegularTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:text="Primary tech"
+                            android:textColor="@color/darkBlue"
+                            android:textSize="10sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="right"
+                            android:orientation="horizontal">
+
+                            <professional.wellness.health.com.employeeapp.View.RegularTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="12dp"
+                                android:text="ViewList"
+                                android:textColor="@color/darkBlue"
+                                android:textSize="10sp" />
+
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_marginLeft="10dp"
+                                android:src="@mipmap/down_blue" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <professional.wellness.health.com.employeeapp.View.RegularTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Services provided:"
+                        android:textColor="@color/grey"
+                        android:textSize="11sp" />
+
+                    <professional.wellness.health.com.employeeapp.View.RegularTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Primary and Urgent Care and Women's Health Services"
+                        android:textColor="@color/darkBlue"
+                        android:textSize="11sp" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+        <LinearLayout
+            android:id="@+id/empReturn"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/red"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <professional.wellness.health.com.employeeapp.View.RegularTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Return"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

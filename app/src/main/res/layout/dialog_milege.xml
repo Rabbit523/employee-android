@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/milage_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:orientation="vertical">
+
+        <professional.wellness.health.com.employeeapp.View.RegularTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="PLease Enter Mileage (RT)"
+            android:textColor="@color/red"
+            android:textSize="10sp" />
+
+        <professional.wellness.health.com.employeeapp.View.RegularEditText
+            android:id="@+id/edt_milage"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:inputType="number"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="5dp"
+            android:singleLine="true"
+            android:layout_marginTop="12dp"
+            android:textSize="12sp"
+            android:textColor="@color/darkBlue"
+            android:background="@drawable/rounde_grey_border"
+            android:paddingLeft="10dp" />
+
+        <professional.wellness.health.com.employeeapp.View.RegularTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:text="PLease Enter Drive time (RT)"
+            android:textColor="@color/red"
+            android:textSize="10sp" />
+
+        <professional.wellness.health.com.employeeapp.View.RegularEditText
+            android:id="@+id/edt_drive_time"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginLeft="15dp"
+            android:textSize="12sp"
+            android:hint="Enter minutes"
+            android:inputType="number"
+            android:singleLine="true"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/darkBlue"
+            android:background="@drawable/rounde_grey_border"
+            android:paddingLeft="10dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginTop="7dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="5dp"
+            android:gravity="right"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:weightSum="2">
+
+       <LinearLayout
+           android:layout_width="0dp"
+           android:layout_weight="1"
+           android:layout_height="wrap_content">
+           <professional.wellness.health.com.employeeapp.View.RegularButton
+               android:id="@+id/cancel"
+               android:layout_width="match_parent"
+               android:layout_height="38dp"
+               android:background="@drawable/rounded_short_radius_blue"
+               android:textAllCaps="false"
+               android:text="Skip"
+               android:textColor="#fff" />
+       </LinearLayout>
+
+            <View
+                android:layout_width="10dp"
+                android:layout_height="match_parent"></View>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+                <professional.wellness.health.com.employeeapp.View.RegularButton
+                    android:id="@+id/milage_submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:background="@drawable/rounded_short_radius_blue"
+                    android:textAllCaps="false"
+                    android:text="Submit"
+                    android:textColor="#fff" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

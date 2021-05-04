@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main_layout"
+    android:background="@drawable/login"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:src="@mipmap/app_logo" />
+
+            <professional.wellness.health.com.employeeapp.View.RegularEditText
+                android:id="@+id/wellUserName"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="40dp"
+                android:layout_gravity="center"
+                android:inputType="textEmailAddress"
+                android:background="@drawable/roundgrey"
+                android:gravity="center"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:hint="Email"
+                android:textColorHint="@color/darkBlue"
+                android:textColor="@color/darkBlue" />
+
+            <professional.wellness.health.com.employeeapp.View.RegularEditText
+                android:id="@+id/wellPassword"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/roundgrey"
+                android:gravity="center"
+                android:inputType="textPassword"
+                android:hint="Password"
+                android:textColorHint="@color/darkBlue"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:textColor="@color/darkBlue" />
+
+            <professional.wellness.health.com.employeeapp.View.RegularButton
+                android:id="@+id/welLogin"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:textAllCaps="false"
+                android:shadowColor="@color/shadow_color"
+                android:background="@drawable/round_blue_dark"
+                android:text="Let's get started!"
+                android:textColor="@color/white" />
+
+
+            <professional.wellness.health.com.employeeapp.View.RegularTextView
+                android:id="@+id/forgot_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/red"
+                android:text="Did you forget your password?"/>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

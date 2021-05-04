@@ -1,0 +1,44 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="2dip">
+
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="4dp"
+        android:textColor="#9EA4AF"
+        android:textSize="14sp"
+        android:textStyle="bold"></TextView>
+
+    <ImageView
+        android:id="@+id/date_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="45dp">
+    <LinearLayout
+        android:id="@+id/ll_selected"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <professional.wellness.health.com.employeeapp.View.RegularTextView
+        android:id="@+id/dateItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_margin="1dp"
+        android:padding="4dp"
+        android:textColor="#FFFFFF"
+        android:textSize="10sp"
+        ></professional.wellness.health.com.employeeapp.View.RegularTextView>
+    </LinearLayout>
+</LinearLayout>
+</LinearLayout>

@@ -1,0 +1,49 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="2dip">
+
+<FrameLayout
+    android:id="@+id/layout"
+    android:background="@drawable/selected_calander"
+    android:clickable="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+<LinearLayout
+    android:id="@+id/view"
+    android:background="@drawable/round_sky"
+    android:visibility="gone"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="27dp">
+
+</LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/selected_view"
+        android:background="@drawable/selected_calander"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="27dp">
+
+    </LinearLayout>
+
+    <professional.wellness.health.com.employeeapp.View.RegularTextView
+        android:id="@+id/date"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#9EA4AF"
+        android:textSize="10sp"
+        android:textStyle="bold"></professional.wellness.health.com.employeeapp.View.RegularTextView>
+</FrameLayout>
+
+</LinearLayout>

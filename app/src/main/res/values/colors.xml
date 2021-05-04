@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="white">#ffffff</color>
+    <color name="darkBlue">#18497a</color>
+    <color name="red">#f12b2b</color>
+    <color name="grey">#9ea4af</color>
+    <color name="lightgrey">#979797</color>
+    <color name="grayColor">#ebebeb</color>
+    <color name="residemenu_color">#18497A</color>
+    <color name="red_color">#f12b2b</color>
+    <color name="color_white">#FFFFFF</color>
+    <color name="lightblue">#67d7fe</color>
+    <color name="black">#000000</color>
+    <color name="txt">#9eA4Af</color>
+    <color name="sky_selected">#67D7Fe</color>
+    <color name="hide_day_color">#E1E1E1</color>
+
+
+
+
+
+    <color name="title_blue">#18497a</color>
+    <color name="txt_light">#9ea4af</color>
+    <color name="middle__txt_light">#587685</color>
+    <color name="view">#D6D9DD</color>
+    <color name="blue_light">#ADBECF</color>
+
+    <color name="screen_back">#f8f8f8</color>
+    <color name="shadow_color">#edecee</color>
+
+
+
+</resources>
